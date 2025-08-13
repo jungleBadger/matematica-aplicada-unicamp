@@ -1,0 +1,23 @@
+@import "reveal.js/dist/reveal.css";
+@import "reveal.js/dist/theme/black-contrast.css";
+@import "theme.css";
+
+///* Only truly global extras live here */
+.tooltip {
+  color: #fff;
+  font-size: 18px;
+  max-width: 28ch;
+  text-align: center;
+
+  /* triangle bubble from your code */
+  --b: 2em; --h: 1em; --p: 100%; --r: 1.2em; --c: #4ecdc4;
+  padding: 1em;
+  border-radius: var(--r) var(--r) min(var(--r), 100% - var(--p) - var(--b) / 2)
+  min(var(--r), var(--p) - var(--b) / 2) / var(--r);
+  clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+          min(100%, var(--p) + var(--b)/2) 100%, var(--p) calc(100% + var(--h)),
+          max(0%, var(--p) - var(--b)/2) 100%);
+  background: var(--c);
+  border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
+  calc(100% - var(--p) - var(--b)/2) 0 calc(var(--p) - var(--b)/2) / 0 0 var(--h) 0;
+}
