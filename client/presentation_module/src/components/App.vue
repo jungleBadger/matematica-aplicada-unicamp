@@ -5,6 +5,7 @@
       <SectionTwoWorlds />
       <SectionLabToMarket />
       <SectionVectorSearch />
+      <sectionRAGDiagram />
       <SectionJuliaSnippet />
       <SectionPythonSnippet />
       <SectionBridgeChecklist />
@@ -39,6 +40,7 @@ import SectionTwoWorlds from "./SectionTwoWorlds.vue";
 import SectionLabToMarket from "./SectionLabToMarket.vue";
 import SectionArchitectureOverview from "./SectionArchitectureOverview.vue";
 import SectionBridgeChecklist from "./SectionBridgeChecklist.vue";
+import SectionRAGDiagram from "./SectionRAGDiagram.vue";
 
 const mainSlides = ref(null);
 let deck;
