@@ -3,7 +3,12 @@
   <section class="code-container">
     <h2 class="slide-title">Exemplo em Julia: Busca Vetorial</h2>
 
-    <pre v-pre><code class="language-julia" data-line-numbers="3-5|8-10|13-15">
+    <pre v-pre>
+<code
+    class="language-julia"
+    data-trim
+    data-line-numbers="1-4|6-7|14-20|22-26"
+>
 using LinearAlgebra
 
 # Normaliza vetor (‖v‖₂ = 1)
@@ -30,7 +35,8 @@ collection = [normalize!(rand(128)) for _ in 1:5]
 query      = rand(128)
 top        = search(collection, query; k=3)
 println(top)  # => [(índice, score), ...]
-    </code></pre>
+</code>
+    </pre>
   </section>
 </template>
 

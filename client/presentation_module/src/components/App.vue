@@ -2,28 +2,25 @@
   <div class="reveal" ref="mainSlides">
     <div class="slides">
       <SectionWhoAmI />
-
-
       <SectionTwoWorlds />
-
       <SectionLabToMarket />
-
-      <SectionJuliaSnippet />
-
       <SectionVectorSearch />
-      <SectionVectorIndex />
-
-
-
-
-<!--      <SectionThankYou />-->
-<!--      <SectionContact />-->
+      <SectionJuliaSnippet />
+      <SectionPythonSnippet />
+      <SectionBridgeChecklist />
+      <SectionArchitectureOverview />
+      <SectionImpactMetrics />
+      <SectionContact />
+      <SectionThankYou />
 
     </div>
   </div>
 </template>
 
 <script setup>
+
+import SectionImpactMetrics from "./SectionImpactMetrics.vue";
+
 defineOptions({ name: "JPFApp" });
 
 import { ref, onMounted, onBeforeUnmount } from "vue";
@@ -35,9 +32,13 @@ import SectionThankYou from "./SectionThankYou.vue";
 import SectionContact from "./SectionContact.vue";
 import SectionVectorSearch from "./SectionVectorSearch.vue";
 import SectionJuliaSnippet from "./SectionJuliaSnippet.vue";
+import SectionPythonSnippet from "./SectionPythonSnippet.vue";
+import SectionEmbeddingBestPractices from "./SectionEmbeddingBestPractices.vue";
 import SectionVectorIndex from "./SectionVectorIndex.vue";
 import SectionTwoWorlds from "./SectionTwoWorlds.vue";
 import SectionLabToMarket from "./SectionLabToMarket.vue";
+import SectionArchitectureOverview from "./SectionArchitectureOverview.vue";
+import SectionBridgeChecklist from "./SectionBridgeChecklist.vue";
 
 const mainSlides = ref(null);
 let deck;
