@@ -74,7 +74,6 @@ onMounted(async () => {
 .qr-box {
   display: grid;
   place-items: center;
-  width: min(56vmin, 320px);
   max-width: 90vw;
   max-height: 60vh;
   aspect-ratio: 1 / 1;
