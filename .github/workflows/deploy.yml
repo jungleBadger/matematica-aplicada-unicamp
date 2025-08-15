@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -21,6 +21,7 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: mkdir -p client/presentation_module/dist/static && cp -r client/static/* client/presentation_module/dist/static/
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
