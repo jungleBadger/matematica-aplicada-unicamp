@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages (gh-pages branch)
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
@@ -19,16 +19,11 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Install
-        run: npm ci
+      - run: npm ci
+      - run: npm run build
 
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: client/presentation_module/dist
           publish_branch: gh-pages
-          # keep_files: true   # optional
