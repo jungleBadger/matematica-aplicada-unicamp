@@ -1,18 +1,17 @@
-<!-- PythonSnippetSlide.vue (renamed to SectionQRCode.vue to reflect content) -->
 <template>
   <section class="slide-container">
     <h2 class="slide-title">Acompanhe em tempo real!</h2>
 
     <div style="display:flex; flex-direction:column; align-items:center; gap:1.25rem;">
-      <!-- QR first (fragment #1) -->
-      <div  style="display:flex; justify-content:center;">
-        <!-- Keep your inline SVG QR; sized responsively -->
+      <!-- QR area: we render a proper SVG here; fallback SVG stays if fetch fails -->
+      <div ref="qrBox" style="display:flex; justify-content:center;">
+        <!-- Fallback inline SVG (kept from your version) -->
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 41 41"
             shape-rendering="crispEdges"
             role="img"
-            aria-label="QR code para junglebadger.github.io/seti_presentation"
+            aria-label="QR code"
             style="width:min(56vmin, 320px); height:auto; box-shadow: var(--shadow); border: var(--panel-border); border-radius: var(--radius); background:#fff;"
         >
           <path fill="#ffffff" d="M0 0h41v41H0z"/>
@@ -20,19 +19,18 @@
         </svg>
       </div>
 
-      <!-- Caption (fragment   #2) -->
       <div style="text-align:center;">
         <p style="font-size:clamp(18px,2.2vw,24px); color:var(--ink); margin:0;">
           Leia o QR Code ou acesse:
         </p>
         <p style="margin:.25rem 0 0;">
           <a
-              href="https://junglebadger.github.io/matematica_aplicada_unicamp"
+              href="https://junglebadger.github.io/matematica-aplicada-unicamp?room=my-talk"
               target="_blank"
               rel="noopener noreferrer"
               style="font-weight:700; font-size:clamp(18px,2.4vw,26px);"
           >
-            junglebadger.github.io/matematica_aplicada_unicamp
+            junglebadger.github.io/matematica-aplicada-unicamp
           </a>
         </p>
       </div>
@@ -41,5 +39,37 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from "vue";
 defineOptions({ name: "SectionQRCode" });
+
+const qrBox = ref(null);
+const QR_URL =
+    "https://junglebadger.github.io/matematica-aplicada-unicamp?room=my-talk";
+
+// Replace fallback with a live SVG QR (keeps everything inline in the DOM)
+onMounted(async () => {
+  try {
+    const resp = await fetch(
+        `https://api.qrserver.com/v1/create-qr-code/?size=420x420&format=svg&data=${encodeURIComponent(
+            QR_URL
+        )}`
+    );
+    if (!resp.ok) throw new Error("QR fetch failed");
+    const svgText = await resp.text();
+    if (svgText && qrBox.value) {
+      qrBox.value.innerHTML = svgText;
+      const svg = qrBox.value.querySelector("svg");
+      if (svg) {
+        svg.setAttribute(
+            "style",
+            "width:min(56vmin, 320px); height:auto; box-shadow: var(--shadow); border: var(--panel-border); border-radius: var(--radius); background:#fff;"
+        );
+        svg.setAttribute("role", "img");
+        svg.setAttribute("aria-label", "QR code para acesso rápido");
+      }
+    }
+  } catch {
+    // fallback SVG remains
+  }
+});
 </script>
