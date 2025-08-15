@@ -1,7 +1,7 @@
 <template>
   <section
     data-background-size="cover"
-    data-background-image="/semana-matematica-aplicada/static/pic7.jpg"
+    data-background-image="/matematica-aplicada-unicamp/static/pic7.jpg"
     data-background-opacity="0.4"
   >
     <h1 class="header-title">Contact</h1>

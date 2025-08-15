@@ -1,7 +1,7 @@
 <!-- RagDiagramSlide.vue -->
 <template>
   <section class="image-slide">
-    <section data-background-size="contain" data-background-image="semana-matematica-aplicada/static/rag.png"></section>
+    <section data-background-size="contain" data-background-image="matematica-aplicada-unicamp/static/rag.png"></section>
   </section>
 </template>
 

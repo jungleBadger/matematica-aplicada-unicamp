@@ -3,11 +3,11 @@
 
   <section>
 
-    <section data-background-size="cover" data-background-image="/semana-matematica-aplicada/static/pixelart8.webp" data-background-opacity="0.05" data-auto-animate>
+    <section data-background-size="cover" data-background-image="/matematica-aplicada-unicamp/static/pixelart8.webp" data-background-opacity="0.05" data-auto-animate>
       <h2><span style="font-size: 1em; font-weight: bold; color: #00FFFF; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">Da Teoria ao Impacto:</span> <span style="font-size: 1.1em; color: #FFFFFF; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: normal">Como a matemática move arquiteturas inteligentes</span></h2>
     </section>
 
-    <section data-background-size="cover" data-background-image="/semana-matematica-aplicada/static/pixelart8.webp" data-background-opacity="0.12" data-auto-animate>
+    <section data-background-size="cover" data-background-image="/matematica-aplicada-unicamp/static/pixelart8.webp" data-background-opacity="0.12" data-auto-animate>
       <h2><span style="font-size: 1em; font-weight: bold; color: #00FFFF; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">Da Teoria ao Impacto:</span> <span style="font-size: 1.1em; color: #FFFFFF; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: normal">Como a matemática move arquiteturas inteligentes</span></h2>
       <h3 style="font-size: 1.2em; color: #FFD700; font-weight: bold; text-align: center; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); margin-top: 30px;">
         Por Daniel Abrão</h3>
@@ -15,7 +15,7 @@
 
 
 
-    <section data-background-size="cover" data-background-image="/semana-matematica-aplicada/static/pic3.jpg" data-background-opacity="0.25">
+    <section data-background-size="cover" data-background-image="/matematica-aplicada-unicamp/static/pic3.jpg" data-background-opacity="0.25">
       <h1 class="header-title">
         Companies
       </h1>
@@ -29,7 +29,7 @@
 
 
 
-    <section data-background-size="cover" data-background-image="/semana-matematica-aplicada/static/pic1.jpg" data-background-opacity="0.25">
+    <section data-background-size="cover" data-background-image="/matematica-aplicada-unicamp/static/pic1.jpg" data-background-opacity="0.25">
       <h1 class="header-title">
         Skills
       </h1>

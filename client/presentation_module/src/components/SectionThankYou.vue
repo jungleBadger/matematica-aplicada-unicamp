@@ -2,11 +2,11 @@
 
   <section>
     <section
-        data-background-video="semana-matematica-aplicada/static/flame-bg-frame.mp4">
+        data-background-video="matematica-aplicada-unicamp/static/flame-bg-frame.mp4">
       Thank you
     </section>
 
-    <section data-background-size="contain" data-background-image="semana-matematica-aplicada/static/pic6.jpg"></section>
+    <section data-background-size="contain" data-background-image="matematica-aplicada-unicamp/static/pic6.jpg"></section>
 
     <section>
       And remember...
