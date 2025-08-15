@@ -1,10 +1,12 @@
-# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages (gh-pages branch)
 
 on:
   push:
-    branches: [ master ]   # or your default branch
+    branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -14,8 +16,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-            node-version: 20
-            cache: 'npm'
+          node-version: 20
+          cache: 'npm'
 
       - name: Install
         run: npm ci
@@ -23,13 +25,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      # If you have a CNAME file at repo root and want it on Pages:
-      # - name: Copy CNAME
-      #   run: if [ -f CNAME ]; then cp CNAME client/presentation_module/dist/CNAME; fi
-
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: client/presentation_module/dist
           publish_branch: gh-pages
+          # keep_files: true   # optional
