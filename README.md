@@ -4,6 +4,7 @@ AI Presentation code base
 
 ## Stack
 
+
 ### Backend
 
 - **Node.js v20.16+**
